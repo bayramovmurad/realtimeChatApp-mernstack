@@ -1,13 +1,16 @@
+import { Route, Routes } from "react-router-dom"
 import Home from "./screen/home/Home"
-
-
+import SignUp from './screen/signup/SignUp'
+import Login from './screen/login/Login'
 const App = () => {
   return (
-    <div>
       <div className="p-4 h-screen flex items-center justify-center">
-        <Home/>
+        <Routes>
+          <Route path="/" element={<Home/>} /> 
+        <Route path="/signup" element={<SignUp />} /> 
+        <Route path="/login" element={<Login />} /> 
+        </Routes>
       </div>
-    </div>
   )
 }
 export default App
